@@ -1,18 +1,12 @@
 {
-  "name": "better-auth-demo",
+  "name": "web",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
   "author": "",
   "type": "module",
   "main": "index.js",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "dev": "npm run dev -w packages/api",
-    "db:start": "docker compose up -d",
-    "db:stop": "docker compose down",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

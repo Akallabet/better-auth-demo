@@ -1,7 +1,7 @@
 #Better Auth demo
 
-[ ] postgres with docker compose
-[ ] api with fastify
+[x] postgres with docker compose
+[x] api with fastify
 [ ] web with react-router-v7
 [ ] install better-auth with postgres adapter in api
 [ ] install better-auth-client in web
