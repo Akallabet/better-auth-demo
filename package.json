@@ -10,9 +10,14 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "npm run dev -w packages/api",
+    "dev:api": "npm run dev -w packages/api",
+    "dev:web": "npm run dev -w packages/web",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
     "db:start": "docker compose up -d",
     "db:stop": "docker compose down",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
   }
 }
