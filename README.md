@@ -1,4 +1,4 @@
-#Better Auth demo
+# Better Auth demo
 
 [x] postgres with docker compose
 
