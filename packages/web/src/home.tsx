@@ -1,12 +1,10 @@
-import { useLoaderData } from "react-router";
-
+// import { useLoaderData } from "react-router";
+import { Button } from "./components/ui/button";
 export function HomePage() {
-  const { records } = useLoaderData();
-  console.log("Loaded records:", records);
+  // const { records } = useLoaderData();
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the main entry point of our application.</p>
+      <Button>Click Me</Button>
     </div>
   );
 }
