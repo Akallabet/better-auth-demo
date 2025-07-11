@@ -10,13 +10,11 @@
 
 [x] install better-auth-client in web
 
-[ ] login page with magic link
+[x] login page with magic link
 
-[ ] SSO login via Github
+[x] Admin plugin
 
-[ ] Admin plugin
-
-[ ] JWT plugin
+[x] JWT plugin
 
 [ ] Organization plugin
 
