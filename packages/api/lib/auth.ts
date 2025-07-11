@@ -1,5 +1,5 @@
 import { betterAuth } from "better-auth";
-import { magicLink } from "better-auth/plugins";
+import { admin, jwt, magicLink } from "better-auth/plugins";
 import { Pool } from "pg";
 
 export const auth = betterAuth({
@@ -23,5 +23,7 @@ export const auth = betterAuth({
         }
       },
     }),
+    admin(),
+    jwt(),
   ],
 });

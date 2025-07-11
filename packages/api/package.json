@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "node --watch --experimental-transform-types index.ts",
     "migrate": "npx @better-auth/cli migrate",
+    "generate": "npx @better-auth/cli generate",
     "seed": "node --experimental-transform-types lib/seeds.ts"
   },
   "dependencies": {

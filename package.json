@@ -15,6 +15,7 @@
     "db:start": "docker compose up -d",
     "db:stop": "docker compose down",
     "migrate": "npm run migrate -w packages/api",
+    "generate": "npm run generate -w packages/api",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

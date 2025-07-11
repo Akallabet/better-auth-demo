@@ -1,12 +1,13 @@
 import { Button } from "./components/ui/button";
 import { authClient } from "./lib/auth";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
+import { UsersList } from "./components/UsersList";
 
 export function HomePage() {
   const { data: session, isPending } = authClient.useSession();
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-6xl mx-auto space-y-8">
       <Card>
         <CardHeader>
           <CardTitle>Welcome to BetterAuth Demo</CardTitle>
@@ -38,6 +39,8 @@ export function HomePage() {
           )}
         </CardContent>
       </Card>
+
+      {session && <UsersList />}
     </div>
   );
 }
