@@ -13,13 +13,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Mail } from "lucide-react";
 import { authClient } from "@/lib/auth";
-import { useSearchParams } from "react-router";
 
 export function MagicLinkForm() {
   const [loading, setLoading] = useState(false);
   const [magicLinkSent, setMagicLinkSent] = useState(false);
-  const [searchParams] = useSearchParams();
-  const invitationCode = searchParams.get("invitation");
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -30,9 +27,7 @@ export function MagicLinkForm() {
     authClient.signIn.magicLink(
       {
         email,
-        callbackURL: invitationCode
-          ? `/accept-invitation/${invitationCode}`
-          : "/",
+        callbackURL: "/",
       },
       {
         onSuccess: () => {

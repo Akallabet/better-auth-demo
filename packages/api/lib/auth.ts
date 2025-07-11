@@ -12,9 +12,11 @@ export const auth = betterAuth({
     magicLink({
       // disableSignUp: true,
       expiresIn: 60 * 60,
-      sendMagicLink: async ({ email, url }) => {
-        console.log("Sending magic link to:", email);
-        console.log("MAGIC LINK", url);
+      sendMagicLink: async ({ email, url, token }) => {
+        console.log(
+          "Magic link",
+          `http://localhost:5173/api/auth/magic-link/verify?token=${token}&callbackURL=${encodeURIComponent("/")}`,
+        );
 
         if (process.env.PLT_ENVIRONMENT === "development") {
           return Promise.resolve();

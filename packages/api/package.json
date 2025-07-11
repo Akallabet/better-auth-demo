@@ -7,7 +7,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch --experimental-transform-types index.ts"
+    "dev": "node --watch --experimental-transform-types index.ts",
+    "migrate": "npx @better-auth/cli migrate",
+    "seed": "node --experimental-transform-types lib/seeds.ts"
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
